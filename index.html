@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dineshkumar R - Full Stack Developer (MERN Stack) specializing in React.js, Node.js, Express.js, and MongoDB. View my portfolio, projects, and experience.">
+    <meta name="keywords" content="Full Stack Developer, MERN Stack, React.js, Node.js, Web Developer, Portfolio">
+    <meta name="author" content="Dineshkumar R">
+    <title>Dineshkumar R | Full Stack Developer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">Dineshkumar<span class="accent">.</span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting fade-in">Hello, I'm</p>
+                    <h1 class="hero-title fade-in-up">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </h1>
+                    <h2 class="hero-subtitle fade-in-up delay-1">Full Stack Developer (MERN Stack)</h2>
+                    <p class="hero-description fade-in-up delay-2">
+                        Passionate about building scalable web applications with modern technologies. 
+                        Specialized in React.js, Node.js, Express.js, and MongoDB.
+                    </p>
+                    <div class="hero-cta fade-in-up delay-3">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Get in Touch
+                        </a>
+                    </div>
+                    <div class="social-links fade-in delay-4">
+                        <a href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="mailto:dineshramar.26@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in delay-2">
+                    <div class="image-wrapper">
+                        <div class="glow-effect"></div>
+                        <div class="floating-icon icon-1"><i class="fab fa-react"></i></div>
+                        <div class="floating-icon icon-2"><i class="fab fa-node-js"></i></div>
+                        <div class="floating-icon icon-3"><i class="fab fa-js"></i></div>
+                        <div class="floating-icon icon-4"><i class="fas fa-database"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="reveal">
+                        I'm a <strong>Full Stack Developer</strong> with expertise in the MERN stack, currently working at 
+                        <strong>Markteer Media</strong>. I specialize in building scalable web applications, RESTful APIs, 
+                        and implementing AI-driven solutions.
+                    </p>
+                    <p class="reveal">
+                        My journey in web development started with a passion for creating intuitive user experiences. 
+                        I've successfully engineered 10+ RESTful APIs, optimized React.js and Next.js applications with 
+                        SEO improvements, and collaborated on AI agent workflows.
+                    </p>
+                    <p class="reveal">
+                        I hold a <strong>Master of Computer Application (MCA)</strong> from Srinivasan College of Arts And Science 
+                        and completed intensive training through <strong>NXTWAVE CCBP 4.0 Academy</strong> in Full Stack Web Development.
+                    </p>
+                    <div class="quick-facts reveal">
+                        <div class="fact">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>2+ Years</h4>
+                                <p>Experience</p>
+                            </div>
+                        </div>
+                        <div class="fact">
+                            <i class="fas fa-project-diagram"></i>
+                            <div>
+                                <h4>10+ APIs</h4>
+                                <p>Developed</p>
+                            </div>
+                        </div>
+                        <div class="fact">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>5+ Certifications</h4>
+                                <p>Achieved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Developer (MERN Stack)</h3>
+                                <h4>Markteer Media</h4>
+                            </div>
+                            <span class="timeline-date">Jan 2025 - Present</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check-circle"></i> Engineered and maintained 10+ RESTful APIs using Node.js and Express.js, improving backend performance and scalability</li>
+                            <li><i class="fas fa-check-circle"></i> Architected and optimized React.js and Next.js applications with SEO improvements, enhancing user experience</li>
+                            <li><i class="fas fa-check-circle"></i> Designed MongoDB schemas with optimized indexing and aggregation pipelines to improve query efficiency</li>
+                            <li><i class="fas fa-check-circle"></i> Collaborated on AI agent and prompt-based workflows, enabling scalable and automated customer engagement</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented API integration, request validation, and error handling following REST architecture best practices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Front-End Developer Intern (React JS)</h3>
+                                <h4>Cloud Garage LLP</h4>
+                            </div>
+                            <span class="timeline-date">Oct 2022 - Jun 2023</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check-circle"></i> Acquired foundational design and development skills, contributing to a team project that improved the user interface for a web application by 15%</li>
+                            <li><i class="fas fa-check-circle"></i> Gained hands-on experience with Figma and Continuous Integration, improving the efficiency of project design collaboration by 20%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card reveal">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <a href="https://www.rhinoagents.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <h3>RhinoAgents</h3>
+                    <p class="project-description">
+                        Developed AI agents to automate tasks, optimize workflows, and enhance overall process efficiency.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-star"></i> Developed AI-powered modules to automate customer support, reducing manual workload by 40%</li>
+                        <li><i class="fas fa-star"></i> Implemented prompt-based workflows to standardize internal processes and automated notifications</li>
+                        <li><i class="fas fa-star"></i> Designed and consumed REST APIs for AI workflows and automation pipelines</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">AI Agents</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <a href="https://dinnxttrendz.ccbp.tech/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <h3>NxtTrendz (E-Commerce)</h3>
+                    <p class="project-description">
+                        Designed a fully functional clone of leading e-Commerce platforms such as Amazon and Flipkart.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-star"></i> Implemented dynamic routing for pages (Login, Products, Product Details) using React Router, increasing page interaction rates by 30%</li>
+                        <li><i class="fas fa-star"></i> Improved product API calls using query parameters and pagination, boosting search efficiency by 25%</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-palette"></i> Front-End</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span class="skill-tag"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-react"></i> React.js</span>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-server"></i> Back-End</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Express.js</span>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-table"></i> SQLite</span>
+                        <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-copyright"></i> C/C++</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-network-wired"></i> Backend Concepts</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">API Integration</span>
+                        <span class="skill-tag">Authentication</span>
+                        <span class="skill-tag">Authorization</span>
+                        <span class="skill-tag">MVC Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="education-grid">
+                <div class="education-card glass-card reveal">
+                    <div class="edu-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full Stack Web Development</h3>
+                    <h4>NXTWAVE CCBP 4.0 Academy</h4>
+                    <p class="edu-date">October 2023 - Present</p>
+                    <p class="edu-description">
+                        Industry Ready Certification Program focused on Full-Stack Web Development with 
+                        immersive hands-on and reverse-engineered curriculum.
+                    </p>
+                </div>
+
+                <div class="education-card glass-card reveal">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Master of Computer Application (MCA)</h3>
+                    <h4>Srinivasan College of Arts And Science, Perambalur</h4>
+                    <p class="edu-date">June 2021 - April 2023</p>
+                    <p class="edu-grade">CGPA: 7.5/10</p>
+                </div>
+
+                <div class="education-card glass-card reveal">
+                    <div class="edu-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Bachelor of Computer Application (BCA)</h3>
+                    <h4>Srinivasan College of Arts And Science, Perambalur</h4>
+                    <p class="edu-date">June 2018 - March 2021</p>
+                    <p class="edu-grade">CGPA: 7.0/10</p>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications">
+                <h3 class="certifications-title reveal">Certifications</h3>
+                <div class="cert-grid">
+                    <a href="https://certificates.ccbp.in/academy/static-website?id=CMLOLLZXVV" target="_blank" rel="noopener noreferrer" class="cert-card glass-card reveal">
+                        <i class="fas fa-certificate"></i>
+                        <p>Build Your Own Static Website</p>
+                        <span class="cert-tech">HTML & CSS</span>
+                    </a>
+                    <a href="https://certificates.ccbp.in/academy/dynamic-web-application?id=KERDANYNWA" target="_blank" rel="noopener noreferrer" class="cert-card glass-card reveal">
+                        <i class="fas fa-certificate"></i>
+                        <p>Build Your Own Dynamic Web Application</p>
+                        <span class="cert-tech">JavaScript</span>
+                    </a>
+                    <a href="https://certificates.ccbp.in/academy/introduction-to-databases?id=MBHXLLPTDH" target="_blank" rel="noopener noreferrer" class="cert-card glass-card reveal">
+                        <i class="fas fa-certificate"></i>
+                        <p>Introduction to Databases</p>
+                        <span class="cert-tech">SQL</span>
+                    </a>
+                    <div class="cert-card glass-card reveal">
+                        <i class="fas fa-certificate"></i>
+                        <p>React.js Certification</p>
+                        <span class="cert-tech">React.js</span>
+                    </div>
+                    <div class="cert-card glass-card reveal">
+                        <i class="fas fa-certificate"></i>
+                        <p>Node.js Certification</p>
+                        <span class="cert-tech">Node.js</span>
+                    </div>
+                    <a href="https://certificates.ccbp.in/academy/programming-foundations-with-python?id=RJAZNNFAJK" target="_blank" rel="noopener noreferrer" class="cert-card glass-card reveal">
+                        <i class="fas fa-certificate"></i>
+                        <p>Programming Foundations in Python</p>
+                        <span class="cert-tech">Python</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content reveal">
+                <p class="contact-text">
+                    I'm always interested in hearing about new projects and opportunities. 
+                    Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+                <div class="contact-info">
+                    <a href="mailto:dineshramar.26@gmail.com" class="contact-item glass-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>dineshramar.26@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="tel:+916382402783" class="contact-item glass-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 6382402783</p>
+                        </div>
+                    </a>
+                    <div class="contact-item glass-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Perambalur, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links-footer">
+                    <a href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dineshkumar R. Built with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

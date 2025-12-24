@@ -1,0 +1,170 @@
+.education {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #333;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #0070f3;
+}
+
+.eduGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.eduCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  display: flex;
+  gap: 20px;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s;
+}
+
+.eduCard:hover {
+  transform: translateY(-5px);
+}
+
+.iconCircle {
+  width: 50px;
+  height: 50px;
+  background: #0070f3;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.eduContent {
+  flex: 1;
+}
+
+.year {
+  display: inline-block;
+  background: #f0f7ff;
+  color: #0070f3;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.degree {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.institution {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.location {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.grade {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.subTitle {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.certCard {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.certIcon {
+  color: #ffc107;
+  font-size: 24px;
+  margin-top: 2px;
+}
+
+.certContent {
+  flex: 1;
+}
+
+.certTitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.issuer {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.certLink {
+  font-size: 13px;
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.certLink:hover {
+  text-decoration: underline;
+}

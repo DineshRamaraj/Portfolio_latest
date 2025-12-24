@@ -18,25 +18,25 @@ export default function Education() {
                     Education
                 </motion.h2>
 
-                <div className={styles.eduGrid}>
+                <div className={styles.timeline}>
                     {educationList.map((edu, index) => (
                         <motion.div
                             key={edu.id}
-                            className={styles.eduCard}
-                            initial={{ opacity: 0, x: -30 }}
+                            className={styles.timelineItem}
+                            initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
                         >
-                            <div className={styles.iconCircle}>
-                                <i className={`fas fa-${edu.icon}`}></i>
-                            </div>
-                            <div className={styles.eduContent}>
-                                <span className={styles.year}>{edu.startDate} - {edu.endDate}</span>
+                            <div className={styles.timelineDot}></div>
+                            <div className={styles.timelineContent}>
+                                <span className={styles.period}>{edu.startDate} - {edu.endDate}</span>
                                 <h3 className={styles.degree}>{edu.degree}</h3>
-                                <h4 className={styles.institution}>{edu.institution}</h4>
+                                <h4 className={styles.institution}>
+                                    <i className={`fas fa-${edu.icon}`} style={{ fontSize: '0.9em' }}></i> {edu.institution}
+                                </h4>
                                 <p className={styles.location}>{edu.location}</p>
-                                {edu.grade && <span className={styles.grade}>{edu.grade}</span>}
+                                {edu.grade && <div className={styles.grade}>{edu.grade}</div>}
                                 {edu.description && <p className={styles.description}>{edu.description}</p>}
                             </div>
                         </motion.div>

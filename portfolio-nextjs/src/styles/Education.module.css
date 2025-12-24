@@ -1,10 +1,11 @@
 .education {
   padding: 100px 0;
-  background: #fff;
+  background: #f8f9fa;
+  overflow: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -12,131 +13,197 @@
 .sectionTitle {
   font-size: 36px;
   text-align: center;
-  margin-bottom: 60px;
-  color: #333;
+  margin-bottom: 80px;
+  color: #1a1a1a;
   position: relative;
+  font-weight: 700;
 }
 
 .sectionTitle::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 3px;
+  height: 4px;
   background: #0070f3;
+  border-radius: 2px;
 }
 
-.eduGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  margin-bottom: 80px;
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 100px;
 }
 
-.eduCard {
-  background: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  display: flex;
-  gap: 20px;
-  border: 1px solid #f0f0f0;
-  transition: transform 0.3s;
+/* Center Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #e1e4e8;
 }
 
-.eduCard:hover {
-  transform: translateY(-5px);
+.timelineItem {
+  position: relative;
+  width: 50%;
+  padding-bottom: 60px;
 }
 
-.iconCircle {
-  width: 50px;
-  height: 50px;
-  background: #0070f3;
-  color: #fff;
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+/* Left Items (Odd children, Even index) */
+.timelineItem:nth-child(odd) {
+  left: 0;
+  padding-right: 50px;
+  text-align: right;
+}
+
+/* Right Items (Even children, Odd index) */
+.timelineItem:nth-child(even) {
+  left: 50%;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.timelineDot {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
+  background: #fff;
+  border: 4px solid #0070f3;
+  z-index: 1;
 }
 
-.eduContent {
-  flex: 1;
+/* Dot positioning */
+.timelineItem:nth-child(odd) .timelineDot {
+  right: -11px;
 }
 
-.year {
+.timelineItem:nth-child(even) .timelineDot {
+  left: -11px;
+}
+
+.timelineContent {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.period {
   display: inline-block;
-  background: #f0f7ff;
+  font-size: 14px;
+  font-weight: 600;
   color: #0070f3;
-  padding: 4px 10px;
-  border-radius: 15px;
-  font-size: 13px;
-  font-weight: 500;
-  margin-bottom: 10px;
+  background: rgba(0, 112, 243, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 15px;
 }
 
 .degree {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 5px;
-  line-height: 1.4;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 8px;
 }
 
 .institution {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 5px;
+  font-size: 18px;
+  color: #636e72;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Align icon correctly for right-aligned items */
+.timelineItem:nth-child(odd) .institution {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
 }
 
 .location {
   font-size: 14px;
-  color: #888;
-  margin-bottom: 10px;
+  color: #b2bec3;
+  margin-bottom: 15px;
+  font-style: italic;
 }
 
 .grade {
-  display: block;
-  font-size: 14px;
-  color: #333;
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 10px;
+  color: #2d3436;
+  margin-bottom: 12px;
 }
 
 .description {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #636e72;
 }
 
+/* Certifications Section */
 .subTitle {
   font-size: 28px;
-  color: #333;
+  font-weight: 700;
+  color: #2d3436;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .certGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
 }
 
 .certCard {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
   display: flex;
-  gap: 15px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
   align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f2f6;
+  transition: all 0.3s ease;
+}
+
+.certCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-color: #0070f3;
 }
 
 .certIcon {
-  color: #ffc107;
   font-size: 24px;
-  margin-top: 2px;
+  color: #fbbf24;
+  background: #fffbeb;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .certContent {
@@ -144,27 +211,65 @@
 }
 
 .certTitle {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 6px;
+  line-height: 1.4;
 }
 
 .issuer {
   font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
+  color: #636e72;
+  margin-bottom: 10px;
 }
 
 .certLink {
   font-size: 13px;
   color: #0070f3;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+  transition: opacity 0.2s;
 }
 
 .certLink:hover {
-  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timelineItem {
+    width: 100%;
+    left: 0 !important; /* Override nth-child */
+    padding-left: 50px;
+    padding-right: 0 !important; /* Override nth-child */
+    text-align: left !important;
+  }
+
+  .timelineDot {
+    left: 11px !important;
+    right: auto !important;
+  }
+
+  .timelineItem:nth-child(odd) .institution {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
 }

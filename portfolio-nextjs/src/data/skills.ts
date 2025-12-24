@@ -58,6 +58,16 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    id: "languages",
+    title: "Programming Languages",
+    icon: "code",
+    skills: [
+      { name: "Python", icon: "fab fa-python" },
+      { name: "JavaScript", icon: "fab fa-js" },
+      { name: "C++", icon: "fab fa-cuttlefish" }, // using cuttlefish as C++ often uses C icon or custom, but let's check standard fontawesome
+    ],
+  },
+  {
     id: "core",
     title: "Core Concepts",
     icon: "brain",

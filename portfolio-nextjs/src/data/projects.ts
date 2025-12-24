@@ -6,43 +6,62 @@ export interface Project {
   technologies: string[];
   link?: string;
   github?: string;
-  category: 'full-stack' | 'frontend' | 'backend' | 'ai' | 'personal';
+  category: "full-stack" | "frontend" | "backend" | "ai" | "personal";
   featured: boolean;
   icon: string;
 }
 
 export const projects: Project[] = [
   {
-    id: 'rhinoagents',
-    title: 'RhinoAgents',
-    description: 'Developed AI agents to automate tasks, optimize workflows, and enhance overall process efficiency.',
+    id: "rhinoagents",
+    title: "RhinoAgents",
+    description:
+      "Architected and deployed autonomous AI agent systems that streamline complex business workflows and enhance operational efficiency.",
     highlights: [
-      'Developed AI-powered modules to automate customer support, reducing manual workload by 40%',
-      'Implemented prompt-based workflows to standardize internal processes and automated notifications',
-      'Designed and consumed REST APIs for AI workflows and automation pipelines'
+      "Engineered AI-powered customer support modules efficiently resolving 40% of inquiries without human intervention.",
+      "Implemented standardized prompt-based workflows to automate internal notifications and decision processes.",
+      "Designed robust REST APIs to seamlessly integrate AI workflows with existing enterprise automation pipelines.",
     ],
-    technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'AI Agents', 'Prompt Engineering'],
-    link: 'https://www.rhinoagents.com',
-    category: 'ai',
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "AI Agents",
+      "Prompt Engineering",
+      "REST APIs",
+    ],
+    link: "https://www.rhinoagents.com",
+    category: "ai",
     featured: true,
-    icon: 'robot'
+    icon: "robot",
   },
   {
-    id: 'nxttrendz',
-    title: 'NxtTrendz (E-Commerce)',
-    description: 'Designed a fully functional clone of leading e-Commerce platforms such as Amazon and Flipkart.',
+    id: "nxttrendz",
+    title: "NxtTrendz (E-Commerce)",
+    description:
+      "Built a feature-rich e-commerce platform replicating core functionalities of major retailers like Amazon, focusing on performance and user experience.",
     highlights: [
-      'Implemented dynamic routing for pages (Login, Products, Product Details) using React Router, increasing page interaction rates by 30%',
-      'Improved product API calls using query parameters and pagination, boosting search efficiency by 25%'
+      "Implemented secure authentication and protected routes, ensuring safe user access to profile and order history.",
+      "Optimized product filtering and search capabilities using advanced API query parameters, improving result relevance by 25%.",
+      "Designed a responsive, mobile-first UI with smooth navigation transitions using React Router.",
     ],
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React.js'],
-    link: 'https://dinnxttrendz.ccbp.tech/',
-    category: 'full-stack',
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "CSS Modules",
+      "Authentication",
+      "Rest API",
+    ],
+    link: "https://dinnxttrendz.ccbp.tech/",
+    category: "full-stack",
     featured: true,
-    icon: 'shopping-cart'
-  }
+    icon: "shopping-cart",
+  },
 ];
 
-export const featuredProjects = projects.filter(p => p.featured);
-export const projectsByCategory = (category: string) => 
-  category === 'all' ? projects : projects.filter(p => p.category === category);
+export const featuredProjects = projects.filter((p) => p.featured);
+export const projectsByCategory = (category: string) =>
+  category === "all"
+    ? projects
+    : projects.filter((p) => p.category === category);

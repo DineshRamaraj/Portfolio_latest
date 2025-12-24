@@ -1,14 +1,33 @@
+'use client';
+
 import styles from '@/styles/Projects.module.css';
 import { projects } from '@/data/projects';
+import { motion } from 'framer-motion';
 
 export default function Projects() {
     return (
         <section id="projects" className={styles.projects}>
             <div className={styles.container}>
-                <h2 className={styles.sectionTitle}>Projects</h2>
+                <motion.h2
+                    className={styles.sectionTitle}
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Projects
+                </motion.h2>
                 <div className={styles.grid}>
-                    {projects.map((project) => (
-                        <div key={project.id} className={styles.card}>
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={project.id}
+                            className={styles.card}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                        >
                             <div className={styles.cardHeader}>
                                 <div className={styles.icon}>
                                     {project.icon === 'robot' && <i className="fas fa-robot"></i>}
@@ -33,7 +52,7 @@ export default function Projects() {
                                     <span key={index} className={styles.tag}>{tech}</span>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

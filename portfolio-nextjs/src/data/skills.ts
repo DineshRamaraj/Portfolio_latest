@@ -12,68 +12,60 @@ export interface Skill {
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'frontend',
-    title: 'Front-End',
-    icon: 'palette',
+    id: "frontend",
+    title: "Front-End",
+    icon: "palette",
     skills: [
-      { name: 'HTML', icon: 'html5' },
-      { name: 'CSS', icon: 'css3-alt' },
-      { name: 'Bootstrap', icon: 'bootstrap' },
-      { name: 'Tailwind CSS', icon: 'wind' },
-      { name: 'JavaScript', icon: 'js' },
-      { name: 'React.js', icon: 'react' }
-    ]
+      { name: "React.js", icon: "fab fa-react" },
+      { name: "Next.js", icon: "fas fa-layer-group" },
+      { name: "TypeScript", icon: "fas fa-code" },
+      { name: "JavaScript (ES6+)", icon: "fab fa-js" },
+      { name: "Tailwind CSS", icon: "fas fa-wind" },
+      { name: "HTML5", icon: "fab fa-html5" },
+      { name: "CSS3", icon: "fab fa-css3-alt" },
+      { name: "Bootstrap", icon: "fab fa-bootstrap" },
+    ],
   },
   {
-    id: 'backend',
-    title: 'Back-End',
-    icon: 'server',
+    id: "backend",
+    title: "Back-End",
+    icon: "server",
     skills: [
-      { name: 'Node.js', icon: 'node-js' },
-      { name: 'Express.js', icon: 'project-diagram' }
-    ]
+      { name: "Node.js", icon: "fab fa-node-js" },
+      { name: "Express.js", icon: "fas fa-server" },
+      { name: "RESTful APIs", icon: "fas fa-network-wired" },
+    ],
   },
   {
-    id: 'databases',
-    title: 'Databases',
-    icon: 'database',
+    id: "database",
+    title: "Database",
+    icon: "database",
     skills: [
-      { name: 'MySQL', icon: 'database' },
-      { name: 'SQLite', icon: 'table' },
-      { name: 'MongoDB', icon: 'leaf' }
-    ]
+      { name: "MongoDB", icon: "fas fa-leaf" },
+      { name: "MySQL", icon: "fas fa-database" },
+      { name: "PostgreSQL", icon: "fas fa-database" },
+    ],
   },
   {
-    id: 'languages',
-    title: 'Languages',
-    icon: 'code',
+    id: "tools",
+    title: "Tools & DevOps",
+    icon: "tools",
     skills: [
-      { name: 'C/C++', icon: 'copyright' },
-      { name: 'Java', icon: 'java' },
-      { name: 'Python', icon: 'python' },
-      { name: 'JavaScript', icon: 'js' }
-    ]
+      { name: "Git & GitHub", icon: "fab fa-github" },
+      { name: "VS Code", icon: "fas fa-code" },
+      { name: "Postman", icon: "fas fa-paper-plane" },
+      { name: "Vercel", icon: "fas fa-cloud-upload-alt" },
+    ],
   },
   {
-    id: 'tools',
-    title: 'Tools & Technologies',
-    icon: 'tools',
+    id: "core",
+    title: "Core Concepts",
+    icon: "brain",
     skills: [
-      { name: 'VS Code', icon: 'code' },
-      { name: 'Git', icon: 'git-alt' },
-      { name: 'GitHub', icon: 'github' }
-    ]
+      { name: "Data Structures" },
+      { name: "Algorithms" },
+      { name: "OOPs" },
+      { name: "System Design" },
+    ],
   },
-  {
-    id: 'backend-concepts',
-    title: 'Backend Concepts',
-    icon: 'network-wired',
-    skills: [
-      { name: 'REST APIs' },
-      { name: 'API Integration' },
-      { name: 'Authentication' },
-      { name: 'Authorization' },
-      { name: 'MVC Architecture' }
-    ]
-  }
 ];

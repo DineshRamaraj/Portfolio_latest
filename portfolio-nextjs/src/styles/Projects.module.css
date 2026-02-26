@@ -1,6 +1,6 @@
 .projects {
   padding: 100px 0;
-  background: #fff;
+  background: var(--bg-primary);
 }
 
 .container {
@@ -13,19 +13,19 @@
   font-size: 36px;
   text-align: center;
   margin-bottom: 60px;
-  color: #333;
+  color: var(--text-primary);
   position: relative;
 }
 
 .sectionTitle::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #0070f3;
+  background: var(--accent);
 }
 
 .grid {
@@ -35,17 +35,19 @@
 }
 
 .card {
-  background: #fff;
+  background: var(--bg-primary);
   border-radius: 8px;
   padding: 30px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid #f0f0f0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  border: 1px solid var(--border-color);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .cardHeader {
@@ -57,27 +59,27 @@
 
 .icon {
   font-size: 40px;
-  color: #0070f3;
+  color: var(--accent);
 }
 
 .linkIcon {
-  color: #aaa;
+  color: var(--text-secondary);
   font-size: 20px;
   transition: color 0.3s;
 }
 
 .linkIcon:hover {
-  color: #0070f3;
+  color: var(--accent);
 }
 
 .title {
   font-size: 24px;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 15px;
 }
 
 .description {
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 20px;
   line-height: 1.6;
 }
@@ -92,15 +94,15 @@
   position: relative;
   padding-left: 15px;
   margin-bottom: 8px;
-  color: #555;
+  color: var(--text-secondary);
   font-size: 14px;
 }
 
 .highlights li::before {
-  content: '›';
+  content: "›";
   position: absolute;
   left: 0;
-  color: #0070f3;
+  color: var(--accent);
   font-weight: 800;
 }
 
@@ -112,8 +114,8 @@
 }
 
 .tag {
-  background: #f0f7ff;
-  color: #0070f3;
+  background: var(--bg-secondary);
+  color: var(--accent);
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 13px;

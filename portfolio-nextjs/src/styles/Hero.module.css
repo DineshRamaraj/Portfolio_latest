@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--bg-primary);
   padding-top: 80px;
 }
 
@@ -42,7 +42,7 @@
 
 .greeting {
   font-size: 24px;
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 10px;
   font-weight: 500;
 }
@@ -51,37 +51,42 @@
   font-size: 60px;
   font-weight: 800;
   margin-bottom: 20px;
-  color: #111;
+  color: var(--text-primary);
   line-height: 1.1;
   letter-spacing: -1px;
 }
 
 .typingText {
-  color: #0070f3;
+  color: var(--accent);
 }
 
 .cursor {
   display: inline-block;
-  color: #333;
+  color: var(--text-primary);
   margin-left: 4px;
   animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .heroSubtitle {
   font-size: 32px;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 20px;
   font-weight: 600;
 }
 
 .heroDescription {
   font-size: 18px;
-  color: #666;
+  color: var(--text-secondary);
   max-width: 550px;
   margin-bottom: 40px;
   line-height: 1.8;
@@ -106,26 +111,26 @@
 }
 
 .btnPrimary {
-  background: #0070f3;
+  background: var(--accent);
   color: #fff;
   box-shadow: 0 4px 14px rgba(0, 112, 243, 0.3);
 }
 
 .btnPrimary:hover {
-  background: #0060df;
+  background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 112, 243, 0.4);
 }
 
 .btnSecondary {
   background: transparent;
-  border: 2px solid #eaeaea;
-  color: #333;
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
 }
 
 .btnSecondary:hover {
-  border-color: #0070f3;
-  color: #0070f3;
+  border-color: var(--accent);
+  color: var(--accent);
   transform: translateY(-2px);
 }
 
@@ -136,7 +141,7 @@
 
 .socialLink {
   font-size: 24px;
-  color: #666;
+  color: var(--text-secondary);
   transition: all 0.3s;
   display: flex;
   align-items: center;
@@ -144,12 +149,12 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #f5f5f5;
+  background: var(--bg-secondary);
 }
 
 .socialLink:hover {
   color: #fff;
-  background: #0070f3;
+  background: var(--accent);
   transform: translateY(-3px);
 }
 
@@ -164,10 +169,18 @@
   animation: fadeInUp 1s forwards;
 }
 
-.delay1 { animation-delay: 0.2s; }
-.delay2 { animation-delay: 0.4s; }
-.delay3 { animation-delay: 0.6s; }
-.delay4 { animation-delay: 0.8s; }
+.delay1 {
+  animation-delay: 0.2s;
+}
+.delay2 {
+  animation-delay: 0.4s;
+}
+.delay3 {
+  animation-delay: 0.6s;
+}
+.delay4 {
+  animation-delay: 0.8s;
+}
 
 /* Hero Image & Icons */
 .heroImage {
@@ -191,21 +204,25 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(0,112,243,0.15) 0%, rgba(0,112,243,0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 112, 243, 0.15) 0%,
+    rgba(0, 112, 243, 0) 70%
+  );
   border-radius: 50%;
   animation: pulse 4s infinite;
 }
 
 .floatingIcon {
   position: absolute;
-  background: #fff;
+  background: var(--bg-primary);
   border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 40px;
-  color: #333;
+  color: var(--text-primary);
   animation: float 6s ease-in-out infinite;
   z-index: 2;
 }
@@ -215,7 +232,7 @@
   height: 100px;
   top: 20px;
   left: 20px;
-  color: #61DAFB; /* React Blue */
+  color: #61dafb; /* React Blue */
   animation-delay: 0s;
 }
 
@@ -224,7 +241,7 @@
   height: 90px;
   top: 40px;
   right: 30px;
-  color: #68A063; /* Node Green */
+  color: #68a063; /* Node Green */
   animation-delay: 1.5s;
 }
 
@@ -233,7 +250,7 @@
   height: 80px;
   bottom: 80px;
   left: 40px;
-  color: #F7DF1E; /* JS Yellow */
+  color: #f7df1e; /* JS Yellow */
   animation-delay: 3s;
 }
 
@@ -242,7 +259,7 @@
   height: 70px;
   bottom: 60px;
   right: 50px;
-  color: #4DB33D; /* MongoDB Green */
+  color: #4db33d; /* MongoDB Green */
   animation-delay: 4.5s;
 }
 
@@ -272,7 +289,7 @@
 .wheel {
   width: 4px;
   height: 8px;
-  background: #0070f3;
+  background: var(--accent);
   position: absolute;
   top: 10px;
   left: 50%;
@@ -282,8 +299,14 @@
 }
 
 @keyframes scroll {
-  0% { top: 10px; opacity: 1; }
-  100% { top: 30px; opacity: 0; }
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 30px;
+    opacity: 0;
+  }
 }
 
 @media (max-width: 968px) {
@@ -292,36 +315,56 @@
     text-align: center;
     padding-top: 40px;
   }
-  
+
   .heroTitle {
     font-size: 42px;
   }
-  
+
   .heroCta {
     justify-content: center;
   }
-  
+
   .socialLinks {
     justify-content: center;
     margin-bottom: 40px;
   }
-  
+
   .imageWrapper {
     width: 300px;
     height: 300px;
     margin-bottom: 30px;
   }
-  
-  .icon1 { width: 70px; height: 70px; font-size: 30px; }
-  .icon2 { width: 65px; height: 65px; font-size: 28px; }
-  .icon3 { width: 60px; height: 60px; font-size: 25px; }
-  .icon4 { width: 55px; height: 55px; font-size: 22px; }
+
+  .icon1 {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+  .icon2 {
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+  }
+  .icon3 {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+  }
+  .icon4 {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
 }
 
 /* Keyframes Definitions */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
@@ -336,13 +379,25 @@
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(0, 112, 243, 0.4); }
-  70% { box-shadow: 0 0 0 20px rgba(0, 112, 243, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 112, 243, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 112, 243, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 112, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 112, 243, 0);
+  }
 }

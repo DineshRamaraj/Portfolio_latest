@@ -35,7 +35,7 @@ export default function Projects() {
                                     {project.icon !== 'robot' && project.icon !== 'shopping-cart' && <i className="fas fa-code"></i>}
                                 </div>
                                 {project.link && (
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.linkIcon} aria-label={`View ${project.title} live`}>
                                         <i className="fas fa-external-link-alt"></i>
                                     </a>
                                 )}

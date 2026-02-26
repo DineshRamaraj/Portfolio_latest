@@ -82,6 +82,9 @@ export default function Navbar() {
         <div
           className={`${styles.hamburger} ${mobileMenuOpen ? styles.active : ''}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          role="button"
+          tabIndex={0}
         >
           <span></span>
           <span></span>

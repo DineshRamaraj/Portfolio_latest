@@ -71,16 +71,16 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              <a href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <a href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub Profile">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <a href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn Profile">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <a href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Personal Website">
                 <i className="fas fa-globe"></i>
               </a>
-              <a href="mailto:dineshramar.26@gmail.com" className={styles.socialLink}>
+              <a href="mailto:dineshramar.26@gmail.com" className={styles.socialLink} aria-label="Email Me">
                 <i className="fas fa-envelope"></i>
               </a>
             </motion.div>

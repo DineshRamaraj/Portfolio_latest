@@ -58,12 +58,12 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
             >
-              <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
+              <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
                 <i className="fas fa-code"></i> View My Work
-              </a>
-              <a href="#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
                 <i className="fas fa-envelope"></i> Get in Touch
-              </a>
+              </motion.a>
             </motion.div>
             <motion.div
               className={styles.socialLinks}
@@ -71,18 +71,18 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              <a href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub Profile">
+              <motion.a whileHover={{ scale: 1.2, y: -3 }} whileTap={{ scale: 0.9 }} href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub Profile">
                 <i className="fab fa-github"></i>
-              </a>
-              <a href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn Profile">
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.2, y: -3 }} whileTap={{ scale: 0.9 }} href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn Profile">
                 <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Personal Website">
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.2, y: -3 }} whileTap={{ scale: 0.9 }} href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Personal Website">
                 <i className="fas fa-globe"></i>
-              </a>
-              <a href="mailto:dineshramar.26@gmail.com" className={styles.socialLink} aria-label="Email Me">
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.2, y: -3 }} whileTap={{ scale: 0.9 }} href="mailto:dineshramar.26@gmail.com" className={styles.socialLink} aria-label="Email Me">
                 <i className="fas fa-envelope"></i>
-              </a>
+              </motion.a>
             </motion.div>
           </motion.div>
 

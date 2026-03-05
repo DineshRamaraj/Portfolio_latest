@@ -1,18 +1,53 @@
+'use client';
+
 import styles from '@/styles/Contact.module.css';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.2 }
+    }
+};
+
+const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
+};
+
+const itemVariantsRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
+};
 
 export default function Contact() {
     return (
         <section id="contact" className={styles.contact}>
             <div className={styles.container}>
-                <h2 className={styles.sectionTitle}>Get In Touch</h2>
+                <motion.h2
+                    className={styles.sectionTitle}
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Get In Touch
+                </motion.h2>
                 <div className={styles.content}>
-                    <div className={styles.contactInfo}>
-                        <h3 className={styles.infoTitle}>Let's Talk</h3>
-                        <p className={styles.infoText}>
-                            I'm open to new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out!
-                        </p>
+                    <motion.div
+                        className={styles.contactInfo}
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        <motion.h3 variants={itemVariantsLeft} className={styles.infoTitle}>Let&apos;s Talk</motion.h3>
+                        <motion.p variants={itemVariantsLeft} className={styles.infoText}>
+                            I&apos;m open to new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out!
+                        </motion.p>
 
-                        <div className={styles.infoItem}>
+                        <motion.div variants={itemVariantsLeft} className={styles.infoItem}>
                             <div className={styles.iconBox}>
                                 <i className="fas fa-envelope"></i>
                             </div>
@@ -20,9 +55,9 @@ export default function Contact() {
                                 <h4>Email</h4>
                                 <a href="mailto:dineshramar.26@gmail.com">dineshramar.26@gmail.com</a>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className={styles.infoItem}>
+                        <motion.div variants={itemVariantsLeft} className={styles.infoItem}>
                             <div className={styles.iconBox}>
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
@@ -30,22 +65,28 @@ export default function Contact() {
                                 <h4>Location</h4>
                                 <p>India</p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className={styles.socialBox}>
-                            <a href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer">
+                        <motion.div variants={itemVariantsLeft} className={styles.socialBox}>
+                            <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} href="https://github.com/DineshRamaraj" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-github"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer">
+                            </motion.a>
+                            <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} href="https://linkedin.com/in/dineshkumar-ramaraj" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer">
+                            </motion.a>
+                            <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} href="https://dineshramar.netlify.app" target="_blank" rel="noopener noreferrer">
                                 <i className="fas fa-globe"></i>
-                            </a>
-                        </div>
-                    </div>
+                            </motion.a>
+                        </motion.div>
+                    </motion.div>
 
-                    <form className={styles.form}>
+                    <motion.form
+                        className={styles.form}
+                        variants={itemVariantsRight}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
                         <div className={styles.formGroup}>
                             <label htmlFor="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your Name" required />
@@ -58,10 +99,15 @@ export default function Contact() {
                             <label htmlFor="message">Message</label>
                             <textarea id="message" name="message" rows={5} placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" className={styles.submitBtn}>
+                        <motion.button
+                            type="submit"
+                            className={styles.submitBtn}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
                             Send Message <i className="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                        </motion.button>
+                    </motion.form>
                 </div>
             </div>
         </section>
